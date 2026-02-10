@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chargement...</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: Arial, sans-serif;
+    color: white;
+    flex-direction: column;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.text {
+    font-size: 18px;
+    opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="loader"></div>
+<div class="text">Chargement en cours...</div>
+
+<script>
+// Redirection après 5 secondes
+setTimeout(function () {
+    window.location.href = "https://example.com";
+}, 5000);
+</script>
+
+</body>
+</html>
